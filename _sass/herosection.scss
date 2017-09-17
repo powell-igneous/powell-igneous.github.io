@@ -1,0 +1,29 @@
+@import 'vars';
+
+.hero-section {
+  align-items: center;
+  background-image: url('/assets/img/construction-drawings.png');
+  box-sizing: border-box;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  justify-content: center;
+  margin-top: $nav-header-height;
+  padding: 120px 0;
+
+  .hero-section-title {
+    font-size: 35px;
+    min-width: 730px;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .see-services-btn {
+    font-size: 20px;
+    margin-top: 45px;
+  }
+}

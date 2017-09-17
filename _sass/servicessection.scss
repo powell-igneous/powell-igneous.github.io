@@ -1,0 +1,66 @@
+@import 'vars';
+
+.services-section {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.services-list-header {
+  font-family: sans-serif;
+}
+
+.services-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services-list-item {
+  display: flex;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px $light-gray;
+
+  .services-list-img {
+    background-color: gray; // TODO: Replace color
+    display: block;
+    height: 200px;
+    width: 200px;
+  }
+
+  .services-list-desc {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding-left: 15px;
+    width: 600px;
+  }
+
+  .services-list-desc-header {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .services-list-header {
+    font-size: 30px;
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .services-list {
+    align-items: normal;
+  }
+
+  .services-list-item {
+    .services-list-img {
+      display: none;
+    }
+
+    .services-list-desc-header {
+      font-size: 20px;
+    }
+  }
+}

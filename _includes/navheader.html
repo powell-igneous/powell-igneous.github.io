@@ -1,0 +1,27 @@
+<nav class="nav-header">
+    <div class="nav-header-dropdown-menu">
+        <ul class="nav-header-dropdown-menu-items">
+            <li class="link">Services</li>
+            <li class="link">About</li>
+            <li class="link">Contact</li>
+        </ul>
+    </div>
+    <h1 class="header-logo">Granite Engineering and Surveying</h1>
+    <ul class="collapsible-links">
+        <li class="link">Services</li>
+        <li class="link">About</li>
+        <li class="link">Contact</li>
+    </ul>
+    <div class="three-bar-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</nav>
+<script type="text/javascript">
+var dropdownMenu = document.querySelector(".nav-header-dropdown-menu");
+var threeBarMenu = document.querySelector(".three-bar-menu");
+threeBarMenu.addEventListener('click', function() {
+    dropdownMenu.classList.toggle('visible');
+});
+</script>
