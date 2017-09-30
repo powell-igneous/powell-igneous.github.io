@@ -2,19 +2,24 @@
 
 .hero-section {
   align-items: center;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-name: hero-scroll;
+  animation-timing-function: linear;
   background-image: url('/assets/img/construction-drawings.png');
+  background-position: 0;
   box-sizing: border-box;
   color: $white;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   justify-content: center;
   margin-top: $nav-header-height;
   padding: 120px 0;
 
   .hero-section-title {
-    font-size: 35px;
-    min-width: 730px;
+    font-size: 3rem;
+    letter-spacing: .2rem;
     text-align: center;
 
     p {
@@ -22,8 +27,25 @@
     }
   }
 
-  .see-services-btn {
-    font-size: 20px;
-    margin-top: 45px;
+  .hero-section-location {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
   }
+
+  .see-services-btn {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+}
+
+@media(max-width: $small-header-break) {
+  .hero-section {
+    margin-top: $nav-header-small-height;
+    padding: 40px;
+  }
+}
+
+@keyframes hero-scroll {
+  0% { background-position-x: 0; }
+  100% {background-position-x: 1675px;}
 }

@@ -43,6 +43,10 @@
   margin: 0;
 }
 
+.nav-header-spacer {
+  flex-grow: 1;
+}
+
 .collapsible-links {
   display: flex;
   font-size: 18px;
@@ -80,6 +84,17 @@
     &:not(:last-child) {
       margin-bottom: $button-size * .1;
     }
+  }
+}
+
+.nav-header-logo {
+  flex-shrink: 0;
+  height: 90%;
+  width: auto;
+
+  .primary,
+  .secondary {
+    fill: $white;
   }
 }
 
