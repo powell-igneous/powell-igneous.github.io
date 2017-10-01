@@ -1,6 +1,7 @@
 @import 'vars';
 
 .services-section {
+  color: $granite-blue;
   margin: 0 auto;
   max-width: 800px;
 }
@@ -27,10 +28,28 @@
   padding-bottom: 10px;
 
   .services-list-img {
-    background-color: gray; // TODO: Replace color
+    background-color: $gray-1;
+    background-position: center;
+    background-size: cover;
     display: block;
     height: 200px;
     width: 200px;
+
+    &.surveying {
+      background-image: url('/assets/img/gps.png');
+    }
+
+    &.civil {
+      background-image: url('/assets/img/ditch.png');
+    }
+
+    &.environmental {
+      background-image: url('/assets/img/stake.png');
+    }
+
+    &.geotechnical {
+      background-image: url('/assets/img/geotechnical.jpg');
+    }
   }
 
   .services-list-desc {

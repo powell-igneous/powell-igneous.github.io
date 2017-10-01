@@ -8,6 +8,7 @@ $white: #fff;
 $gray-1: #757575;
 $light-gray: #d6d6d6;
 $granite-blue: #124c6a;
+$granite-yellow: #fff967;
 $granite-light-blue: lighten($granite-blue, 25%);
 
 // Breakpoints
@@ -15,3 +16,4 @@ $small-header-break: 930px;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Lato');
+$font-stack: 'Lato', sans-serif;

@@ -1,17 +1,17 @@
 <nav class="nav-header">
     <div class="nav-header-dropdown-menu">
         <ul class="nav-header-dropdown-menu-items">
-            <li class="link">Services</li>
-            <li class="link">About</li>
-            <li class="link">Contact</li>
+            <li class="nav-header-dropdown-menu-item"><a class="link" href="#services">Services</a></li>
+            <li class="nav-header-dropdown-menu-item"><a class="link">About</a></li>
+            <li class="nav-header-dropdown-menu-item"><a class="link" href="#contact-us">Contact</a></li>
         </ul>
     </div>
     {% include logo.svg logoClass="nav-header-logo" %}
     <div class="nav-header-spacer"></div>
     <ul class="collapsible-links">
-        <li class="link">Services</li>
-        <li class="link">About</li>
-        <li class="link">Contact</li>
+        <li><a class="link" href="#services">Services</a></li>
+        <li><a class="link">About</a></li>
+        <li><a class="link" href="#contact-us">Contact</a></li>
     </ul>
     <div class="three-bar-menu">
         <div class="bar"></div>
@@ -24,5 +24,25 @@ var dropdownMenu = document.querySelector(".nav-header-dropdown-menu");
 var threeBarMenu = document.querySelector(".three-bar-menu");
 threeBarMenu.addEventListener('click', function() {
     dropdownMenu.classList.toggle('visible');
+});
+
+
+function scrollToId(id) {
+    var navHeader = document.querySelector('.nav-header');
+    var navHeaderHeight = navHeader.getBoundingClientRect().height;
+
+    var target = document.querySelector(id);
+    var scrollOffset = target.getBoundingClientRect().top - navHeaderHeight;
+
+    window.scrollBy(0, scrollOffset);
+}
+
+var links = document.querySelectorAll('.nav-header .link');
+links.forEach(function(link) {
+    var id = link.getAttribute('href');
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        scrollToId(id);
+    });
 });
 </script>

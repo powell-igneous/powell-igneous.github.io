@@ -25,16 +25,23 @@
 
   .nav-header-dropdown-menu-items {
     background-color: $white;
+    font-family: $font-stack;
+    font-size: 2rem;
     list-style: none;
     margin: 0;
-    padding: 0;
     transform: translateY(-100%);
     transition: transform .25s;
     width: 100%;
   }
 
   &.visible .nav-header-dropdown-menu-items {
+    background-color: $granite-blue;
+    padding: 7px 0 0;
     transform: translateY(0%);
+
+    .nav-header-dropdown-menu-item {
+      padding: 2px 0 13px 13px;
+    }
   }
 }
 
@@ -47,14 +54,21 @@
   flex-grow: 1;
 }
 
+.link {
+  color: $white;
+  text-decoration: none;
+}
+
 .collapsible-links {
   display: flex;
+  font-family: $font-stack;
   font-size: 18px;
   justify-content: flex-end;
   list-style: none;
   margin: 0;
 
   .link {
+    color: $white;
     padding-left: 10px;
   }
 }
