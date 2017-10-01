@@ -46,6 +46,13 @@
 }
 
 @keyframes hero-scroll {
-  0% { background-position-x: 0; }
-  100% {background-position-x: 1675px;}
+  0% {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+
+  100% {
+    background-position-x: 1675px;
+    background-position-y: 1076px;
+  }
 }
