@@ -21,11 +21,14 @@
 }
 
 .services-list-item {
-  border-bottom: solid 1px $light-gray;
   display: flex;
   font-family: 'Lato', sans-serif;
   margin-bottom: 10px;
   padding-bottom: 10px;
+
+  &:not(:last-child) {
+    border-bottom: solid 1px $light-gray;
+  }
 
   .services-list-img {
     background-color: $gray-1;
@@ -80,9 +83,6 @@
   .services-list-item {
     .services-list-img {
       display: none;
-    }
-
-    .services-list-desc-header {
     }
   }
 }
