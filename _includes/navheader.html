@@ -22,10 +22,22 @@
 <script type="text/javascript">
 var dropdownMenu = document.querySelector(".nav-header-dropdown-menu");
 var threeBarMenu = document.querySelector(".three-bar-menu");
-threeBarMenu.addEventListener('click', function() {
-    dropdownMenu.classList.toggle('visible');
-});
+threeBarMenu.addEventListener('click', function(event) {
+    var classList = dropdownMenu.classList;
+    if (classList.contains('visible')) {
+        return;
+    } 
 
+    dropdownMenu.classList.add('visible');
+    setTimeout(function() {
+        var closeDropdown = function () { 
+            dropdownMenu.classList.remove('visible'); 
+            document.removeEventListener('click', closeDropdown);
+        };
+        document.addEventListener('click', closeDropdown);
+    }, 0);
+    
+});
 
 function scrollToId(id) {
     var navHeader = document.querySelector('.nav-header');
