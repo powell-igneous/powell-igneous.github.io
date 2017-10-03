@@ -6,13 +6,6 @@
   max-width: 800px;
 }
 
-.services-list-header {
-  font-family: 'Lato', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  margin-bottom: 3.5rem;
-}
-
 .services-list {
   align-items: center;
   display: flex;
@@ -68,6 +61,12 @@
   .services-list-desc-header {
     font-size: 2rem;
     margin-top: 0;
+  }
+
+  .service-list-desc-blurb {
+    letter-spacing: .1rem;
+    line-height: 2.5rem;
+    margin-bottom: .25rem;
   }
 }
 

@@ -1,0 +1,28 @@
+@import 'vars';
+
+.about-us-section {
+  align-items: center;
+  background-color: $granite-blue;
+  background-image: url('/assets/img/heart-mountain-gps.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 449px;
+  justify-content: center;
+
+  .content-section-header {
+    margin-bottom: 1.2rem;
+  }
+
+  .content-section-blurb {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .content-section-header,
+  .content-section-blurb {
+    max-width: 800px;
+  }
+}
